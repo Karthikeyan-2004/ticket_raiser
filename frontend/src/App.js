@@ -19,7 +19,7 @@ function App() {
     const fetchTickets = async () => {
         try {
             const response = await
-                fetch('https://ticket-raiser-jvoo.vercel.app/api/tickets');
+                fetch('https://ticket-raiser-jpkh.vercel.app/api/tickets');
             const data = await response.json();
             setTickets(data);
         } catch (error) {
@@ -51,7 +51,7 @@ function App() {
 
         try {
             const response = await
-                fetch('https://ticket-raiser-jvoo.vercel.app/api/tickets', {
+                fetch('https://ticket-raiser-jpkh.vercel.app/api/tickets', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ function App() {
     const handleDelete = async (ticketId) => {
         try {
             await
-                fetch(`https://ticket-raiser-jvoo.vercel.app/api/tickets/${ticketId}`, {
+                fetch(`https://ticket-raiser-jpkh.vercel.app/api/tickets/${ticketId}`, {
                     method: 'DELETE',
                 });
             setTickets(tickets.filter((ticket) => ticket._id !== ticketId));
@@ -109,7 +109,7 @@ function App() {
     const handlePriorityChange = async (ticketId, newPriority) => {
         try {
             const response = await
-                fetch(`https://ticket-raiser-jvoo.vercel.app/api/tickets/${ticketId}`, {
+                fetch(`https://ticket-raiser-jpkh.vercel.app/api/tickets/${ticketId}`, {
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json',
